@@ -1,24 +1,47 @@
-#GIT-REPOS
+# GIT-REPOS
 
-##Introduction
+## Introduction
 
 Git-Repos is a simple python based tool which will display a users *public* repositories
 This has been currently tested in Linux environment (Ubuntu 18.04) 
 
-##Requirements (Tested)
-*python 3.7
+## Requirements (Tested)
 
-##Guide
-Install requests
+* python 3.7
+
+## Guide
+
+###### Install requests
+
 ```pip install requests```
 
-Install flask
+###### Install flask
+
 ```pip install flask```
 
-export Flask app
+###### Export Environment variable
+
 ```export FLASK_APP=git-repos.py```
 
-run app
+###### Create GitHub OAuth App
+
+In you Github account go to **Setting -> Developer Settings -> OAuth Apps -> New OAuth App**
+
+Enter the follwing in the fileds
+
+```
+Application Name: GIT-REPOS
+Homepage URL: http://localhost:8080
+Application Description: sample app
+Authorization callback URL: http://localhost:8080/oauth/redirect
+```
+
+###### Get client credentials
+
+Rename the file ```client.example.json``` to ```client.json``` and paste the **Client ID** and **Client Secret** copied from the OAuth App
+
+###### Run tool
+
 ```flask run --port 8080```
 
-Now navigating to ```http://localhost:8080```
+Now navigating to ```http://localhost:8080``` which will redirect to the github authentication page
