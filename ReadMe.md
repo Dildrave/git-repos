@@ -11,19 +11,19 @@ This has been currently tested in Linux environment (Ubuntu 18.04)
 
 ## Guide
 
-##### 1 Install requests
+#### 1 Install requests
 
 ```pip install requests```
 
-##### 2 Install flask
+#### 2 Install flask
 
 ```pip install flask```
 
-##### 3 Export Environment variable
+#### 3 Export Environment variable
 
 ```export FLASK_APP=git-repos.py```
 
-##### 4 Create GitHub OAuth App
+#### 4 Create GitHub OAuth App
 
 In you Github account go to **Setting -> Developer Settings -> OAuth Apps -> New OAuth App**
 
@@ -36,11 +36,11 @@ Application Description: sample app
 Authorization callback URL: http://localhost:8080/oauth/redirect
 ```
 
-##### 5 Get client credentials
+#### 5 Get client credentials
 
 Rename the file ```client.example.json``` to ```client.json``` and paste the **Client ID** and **Client Secret** copied from the OAuth App
 
-##### 6 Run tool
+#### 6 Run tool
 
 ```flask run --port 8080```
 
