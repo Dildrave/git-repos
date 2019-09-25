@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <Title>GitHub Repos</Title>
+        <link rel="stylesheet" type="text/css" href="../static/template.css">
+    </head>
+    <body>
+        <h3>Hi {{ user }} !</h3> 
+        <p>Your Git Hub Repos</p>
+
+        <div class="flex-container">
+            {% for repo_name in repo_names %}
+                <div>
+                    {{ repo_name|safe }}
+                </div>
+            {% endfor %}
+        </div>
+
+    <body>
+</html>

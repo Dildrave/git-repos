@@ -1,0 +1,5 @@
+# compiled python code
+__pycache__
+
+#client credentials
+client.json
