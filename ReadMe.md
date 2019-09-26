@@ -45,3 +45,5 @@ Rename the file ```client.example.json``` to ```client.json``` and paste the **C
 ```flask run --port 8080```
 
 Now navigating to ```http://localhost:8080``` which will redirect to the github authentication page
+
+**More on:**https://uselessspot.wordpress.com/2019/09/24/oauth-2-0-retrieve-a-your-github-repo-details/
