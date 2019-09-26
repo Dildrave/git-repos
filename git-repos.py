@@ -35,7 +35,7 @@ def start():
     access_token = json.loads(response.text)['access_token']
     
     user = get_user(access_token)
-    repo_names = get_user_repos_names(user, access_token)
+    repo_names = get_user_repos_names(access_token)
 
     return render_template("template.html", user = user, repo_names = repo_names)
 
@@ -51,7 +51,7 @@ def get_user(access_token):
 
 
 # retrun list public of repos of the current user
-def get_user_repos_names(user, access_token):
+def get_user_repos_names(access_token):
     GITHUB_USER_REPO_URL = 'https://api.github.com/user/repos'
     headers = {'Authorization': 'token ' + access_token}
     response = requests.get(GITHUB_USER_REPO_URL, headers = headers)
